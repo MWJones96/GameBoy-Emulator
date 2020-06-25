@@ -1,7 +1,10 @@
 #include <iostream>
+#include "CPU/CPU.h"
 
 int main(int argc, char* argv[])
 {
-	std::cout << "Game Boy Emulator Starting Point" << std::endl;
+	CPU::CPU cpu;
+	cpu.Print("brr");
+
 	return 0;
 }

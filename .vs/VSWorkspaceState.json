@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CPU"
   ],
-  "SelectedNode": "\\main.cpp",
+  "SelectedNode": "\\CPU\\CPU.cpp",
   "PreviewInSolutionExplorer": false
 }
