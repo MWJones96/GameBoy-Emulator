@@ -1,7 +1,7 @@
 #include <iostream>
 #include "CPU.h"
 
-CPU::CPU::CPU()
+CPU::CPU::CPU(Bus* memoryBus)
 {
 	this->A = 0b0;
 	this->B = 0b0;
@@ -14,6 +14,13 @@ CPU::CPU::CPU()
 
 	this->PC = 0b0;
 	this->SP = 0b0;
+
+	this->memoryBus = memoryBus;
+}
+
+CPU::CPU::~CPU()
+{
+	delete memoryBus;
 }
 
 void CPU::CPU::Print(char* message)
@@ -21,14 +28,17 @@ void CPU::CPU::Print(char* message)
 	std::cout << "CPU goes " << message << std::endl;
 }
 
-void CPU::CPU::Fetch()
+uint8_t CPU::CPU::Fetch()
 {
+	return this->memoryBus->readByte(this->PC++);
 }
 
-void CPU::CPU::Decode()
+Instruction CPU::CPU::Decode(uint8_t opcode)
 {
+	return opcodeToInstruction.at(opcode);
 }
 
-void CPU::CPU::Execute()
+void CPU::CPU::Execute(Instruction i)
 {
+	i.execute(this);
 }

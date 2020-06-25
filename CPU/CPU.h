@@ -1,15 +1,18 @@
 #pragma once
+#include <map>
+#include "../Bus.h"
 
 namespace CPU 
 {
 	class CPU
 	{
 	public:
-		CPU();
+		CPU(Bus* b);
+		~CPU();
 		void Print(char* message);
-		void Fetch();
-		void Decode();
-		void Execute();
+		uint8_t Fetch();
+		Instruction Decode(uint8_t opcode);
+		void Execute(Instruction i);
 	private:
 		uint8_t A;
 		uint8_t B;
@@ -22,5 +25,12 @@ namespace CPU
 
 		uint16_t PC;
 		uint16_t SP;
+
+		Bus* memoryBus;
+
+		static std::map<uint8_t, Instruction> opcodeToInstruction = {
+			{0x00, NOOPInstruction()},
+			{0x01, OtherInstruction()}
+		};
 	};
 }

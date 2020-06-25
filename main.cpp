@@ -3,7 +3,7 @@
 
 int main(int argc, char* argv[])
 {
-	CPU::CPU cpu;
+	CPU::CPU cpu(nullptr);
 	cpu.Print("brr");
 
 	return 0;
