@@ -21,9 +21,15 @@
     <ClInclude Include="src\CPU\Instruction\NopInstruction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\CPU\CPU.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\CPU\Instruction\NopInstruction.cpp">
+    <ClCompile Include="src\Application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\CPU\CPU.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

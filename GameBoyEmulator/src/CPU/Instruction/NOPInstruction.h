@@ -5,6 +5,12 @@
 class NopInstruction : public Instruction
 {
 public:
-	NopInstruction();
-	void execute();
+	NopInstruction() {}
+
+	void execute(CPU* cpu) override
+	{
+
+	};
+
+	const char* mnenomic = "NOP";
 };
