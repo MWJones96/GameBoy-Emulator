@@ -15,31 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\CPU\CPU.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\MemoryBus.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\CPU\Instruction\NOPInstruction.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\CPU\CPU.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\CPU\Instruction\Instruction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\MemoryBus.h">
+    <ClInclude Include="src\CPU\Instruction\NopInstruction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\CPU\Instruction\NOPInstruction.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\CPU\Instruction\NopInstruction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

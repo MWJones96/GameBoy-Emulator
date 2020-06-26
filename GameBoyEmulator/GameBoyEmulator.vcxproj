@@ -46,12 +46,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(SolutionDir)\bin\$(Configuration)-$(Platform)\$(ProjectName)</OutDir>
-    <IntDir>$(SolutionDir)\bin-int\$(Configuration)-$(Platform)\$(ProjectName)</IntDir>
+    <IntDir>$(SolutionDir)\bin\$(Configuration)-$(Platform)\$(ProjectName)\intermediate</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)\bin\$(Configuration)-$(Platform)\$(ProjectName)</OutDir>
-    <IntDir>$(SolutionDir)\bin-int\$(Configuration)-$(Platform)\$(ProjectName)</IntDir>
+    <IntDir>$(SolutionDir)\bin\$(Configuration)-$(Platform)\$(ProjectName)\intermediate</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -82,16 +82,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\CPU\Instruction\NOPInstruction.cpp" />
-    <ClCompile Include="src\Core\MemoryBus.cpp" />
-    <ClCompile Include="src\CPU\CPU.cpp" />
-    <ClCompile Include="src\Application.cpp" />
+    <ClInclude Include="src\CPU\Instruction\Instruction.h" />
+    <ClInclude Include="src\CPU\Instruction\NopInstruction.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\CPU\Instruction\NOPInstruction.h" />
-    <ClInclude Include="src\Core\MemoryBus.h" />
-    <ClInclude Include="src\CPU\Instruction\Instruction.h" />
-    <ClInclude Include="src\CPU\CPU.h" />
+    <ClCompile Include="src\CPU\Instruction\NopInstruction.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

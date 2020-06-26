@@ -1,5 +1,10 @@
-#include "NOPInstruction.h"
+#include <iostream>
+#include "NopInstruction.h"
 
-void NOPInstruction::execute(CPU& cpu)
+NopInstruction::NopInstruction()
+{}
+
+void NopInstruction::execute()
 {
+	std::cout << "NOP" << std::endl;
 }
