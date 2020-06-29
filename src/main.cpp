@@ -8,7 +8,5 @@ int main(int argc, char *argv[])
 {
     auto sampleLib1 = SampleLib1();
     auto sampleLib2 = SampleLib2();
-    std::cout << sampleLib1.getName() << std::endl;
-    std::cout << sampleLib2.getName() << std::endl;
-    std::cout << sampleLib1.getFullName() << std::endl;
+    std::cout << "Game Boy Emulator Starting Point" << std::endl;
 }
